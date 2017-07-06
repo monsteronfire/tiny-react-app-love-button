@@ -13,7 +13,10 @@ class LoveButton extends React.Component {
   }
 
   handleClick(event) {
-    console.log('click');
+    this.setState({
+      like: !(this.state.like)
+    });
+    console.log(this.state.like);
   }
 
   render() {
