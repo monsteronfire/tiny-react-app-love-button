@@ -14,16 +14,17 @@ class LoveButton extends React.Component {
 
   handleClick(event) {
     this.setState({
-      like: !(this.state.like)
+      like: !(this.state.like),
     });
-    console.log(this.state.like);
   }
 
   render() {
+    const description = this.state.like ? 'loved' : 'unloved';
+
     return (
       <div className='love-button'>
         <Button text='♥' onClick={this.handleClick} />
-        <Description />
+        <Description description={description} />
       </div>
     )
   }
