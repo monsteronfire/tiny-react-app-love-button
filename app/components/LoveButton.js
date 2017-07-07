@@ -20,10 +20,11 @@ class LoveButton extends React.Component {
 
   render() {
     const description = this.state.like ? 'loved' : 'unloved';
+    const status = this.state.like ? 'love' : null;
 
     return (
       <div className='love-button'>
-        <Button text='♥' onClick={this.handleClick} />
+        <Button text='♥' className={status} onClick={this.handleClick} />
         <Description description={description} />
       </div>
     )
